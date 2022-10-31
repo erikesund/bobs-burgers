@@ -15,6 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<EpContainer/>} />
+          <Route path="episodes" element={<EpContainer/>} />
           <Route path="movie" element={<MovieContainer/>} />
           <Route path="characters" element={<CharactersContainer/>} />
         </Routes>
