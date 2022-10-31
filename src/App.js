@@ -2,8 +2,8 @@
 import './css/App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Movie from './components/Movie';
-import Characters from './components/Characters';
+import MovieContainer from './containers/MovieContainer';
+import CharactersContainer from './containers/CharactersContainer';
 import EpContainer from './containers/EpContainer';
 import Header from './components/Header';
 
@@ -15,8 +15,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<EpContainer/>} />
-          <Route path="movie" element={<Movie/>} />
-          <Route path="characters" element={<Characters/>} />
+          <Route path="movie" element={<MovieContainer/>} />
+          <Route path="characters" element={<CharactersContainer/>} />
         </Routes>
       </Router>
     </div>
