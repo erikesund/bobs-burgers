@@ -1,8 +1,8 @@
-import "../EpContainer.css";
+import "../css/episodes/EpContainer.css";
 import React, {useEffect, useState} from "react";
-import EpisodeList from "../components/EpisodeList";
-import EpisodeDetails from "../components/EpisodeDetails";
-import SeasonSelect from "../components/SeasonSelect";
+import EpisodeList from "../components/episodes/EpisodeList";
+import EpisodeDetails from "../components/episodes/EpisodeDetails";
+import SeasonSelect from "../components/episodes/SeasonSelect";
 
 function EpContainer() {
   const [episodes, setEpisodes] = useState([]);

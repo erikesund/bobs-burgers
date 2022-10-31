@@ -1,5 +1,5 @@
 import React from "react";
-import "../EpisodeDetails.css";
+import "../../css/episodes/EpisodeDetails.css";
 import BurgerOfTheDay from "./BurgerOfTheDay";
 
 function EpisodeDetails ({episode, burgers}) {

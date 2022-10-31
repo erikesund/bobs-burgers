@@ -1,5 +1,5 @@
 import React from "react";
-import "../BurgerOfTheDay.css"
+import "../../css/episodes/BurgerOfTheDay.css"
 
 const BurgerOfTheDay = ({foundBurger}) => {
 
