@@ -1,13 +1,29 @@
 import React from "react";
+import Gallery from "../components/movie/Gallery";
+import MovieBlurb from "../components/movie/MovieBlurb";
+import MoviePoster from "../components/movie/MoviePoster";
+import SideBar from "../components/movie/SideBar";
+import Trailer from "../components/movie/Trailer";
 
 function TheMovie (){
   
-  
   return (
-    // <div>This is a placeholder for the Movie page.</div>
-      <div>
-        <p>This animated, big-screen, musical comedy-mystery-adventure is based on the long- running Emmy®-winning series. The story begins when a ruptured water main creates an enormous sinkhole right in front of Bob's Burgers, blocking the entrance indefinitely and ruining the Belchers’ plans for a successful summer. While Bob and Linda struggle to keep the business afloat, the kids try to solve a mystery that could save their family's restaurant. As the dangers mount, these underdogs help each other find hope and fight to get back behind the counter, where they belong.</p>
+    <div className="MainContainer">
+      <div className="TopBar">
+        <hr/>
+        <MovieBlurb/>
+        <hr/>
+        <MoviePoster/>
+        <hr/>
       </div>
+      <SideBar/>
+      <hr/>
+      <Gallery/>
+      <hr/>
+      <Trailer/>
+      <hr/>
+    </div>
+
     )
 }
 
