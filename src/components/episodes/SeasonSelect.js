@@ -1,5 +1,5 @@
 import React from "react";
-import "../SeasonSelect.css"
+import "../../css/episodes/SeasonSelect.css"
 
 
 function SeasonSelect ({seasons, onSeasonSelected}) {

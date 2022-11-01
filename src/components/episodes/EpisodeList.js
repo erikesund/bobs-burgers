@@ -1,6 +1,6 @@
 import React from "react";
 import Episode from "./Episode";
-import "../EpisodeList.css"
+import "../../css/episodes/EpisodeList.css"
 
 function EpisodeList ({episodes, season, onEpisodeClick}) {
   const episodeNodes = episodes.map((episode) => {

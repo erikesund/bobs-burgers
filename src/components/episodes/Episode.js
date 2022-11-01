@@ -1,5 +1,5 @@
 import React from "react";
-import "../Episode.css"
+import "../../css/episodes/Episode.css"
 
 const Episode = ({episode, onClick}) => {
   function handleEpisodeSelect() {
