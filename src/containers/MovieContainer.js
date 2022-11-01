@@ -1,3 +1,4 @@
+import "../css/movie/MovieContainer.css"
 import React from "react";
 import Gallery from "../components/movie/Gallery";
 import MovieBlurb from "../components/movie/MovieBlurb";
@@ -8,9 +9,8 @@ import Trailer from "../components/movie/Trailer";
 function TheMovie (){
   
   return (
-    <div className="MainContainer">
-      <div className="TopBar">
-        <hr/>
+    <div id="main-container">
+      <div id="top-bar">
         <MovieBlurb/>
         <hr/>
         <MoviePoster/>
