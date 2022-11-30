@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MovieContainer from './containers/MovieContainer';
 import CharactersContainer from './containers/CharactersContainer';
 import EpContainer from './containers/EpContainer';
-import Header from './components/Header';
+import Header from './components/header/Header';
 
 function App() {
   return (
