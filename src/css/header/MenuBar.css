@@ -1,0 +1,18 @@
+#menubar {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: xx-large;
+  padding-bottom: 1rem;
+}
+
+a {
+  border: 1px black solid;
+  padding: 1rem;
+  background-color: white;
+  width: 15rem;;
+  
+}
+
+a:visited {
+  color: black;
+}
