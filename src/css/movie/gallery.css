@@ -1,0 +1,29 @@
+.gallery {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.gallery-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.change-buttons {
+  display: flex;;
+  justify-content: center;
+}
+
+.change-buttons > button {
+  margin: 5px;
+}
+
+.change-buttons > button.active {
+  background-color: white;
+  color: black
+}
