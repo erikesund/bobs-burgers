@@ -8,6 +8,8 @@ import Trailer from "../components/movie/Trailer";
 import { Images } from "../components/movie/imageExport";
 
 function TheMovie (){
+
+  const [galleryImages, setGalleryImages] = useState([]);
   
   return (
     <div id="main-container">
