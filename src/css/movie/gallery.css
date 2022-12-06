@@ -1,0 +1,22 @@
+.gallery {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.gallery-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: green;
+  color: white;
+}
+
+.change-buttons {
+  display: flex;;
+  justify-content: center;
+}
