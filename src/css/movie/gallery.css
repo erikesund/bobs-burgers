@@ -20,3 +20,12 @@
   display: flex;;
   justify-content: center;
 }
+
+.change-buttons > button {
+  margin: 5px;
+}
+
+.change-buttons > button.active {
+  background-color: white;
+  color: black
+}
