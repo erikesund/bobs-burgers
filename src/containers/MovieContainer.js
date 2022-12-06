@@ -20,9 +20,11 @@ function TheMovie (){
       <SideBar/>
       <hr/>
       <Gallery>
-        <GalleryItem>Item 1</GalleryItem>
-        <GalleryItem>Item 2</GalleryItem>
-        <GalleryItem>Item 3</GalleryItem>
+        <GalleryItem><img src="/movie/gallery/image01.jpg" width="1000px"/></GalleryItem>
+        <GalleryItem><img src="/movie/gallery/image02.jpg" width="1000px"/></GalleryItem>
+        <GalleryItem><img src="/movie/gallery/image03.jpg" width="1000px"/></GalleryItem>
+        <GalleryItem><img src="/movie/gallery/image04.jpg" width="1000px"/></GalleryItem>
+        <GalleryItem><img src="/movie/gallery/image05.jpg" width="1000px"/></GalleryItem>
       </Gallery>
       <hr/>
       <Trailer/>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../../css/movie/gallery.css"
 
 export const GalleryItem = ({children, width}) => {
@@ -14,12 +14,24 @@ function Gallery ({children}) {
 
     const updateIndex = (newIndex) => {
         if (newIndex < 0) {
-            newIndex = 0;
+            newIndex =  React.Children.count(children) - 1;
         } else if (newIndex >= React.Children.count(children)) {
-            newIndex = React.Children.count(children) - 1;
+            newIndex = 0;
         }
         setActiveIndex(newIndex);
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            updateIndex(activeIndex + 1)
+        }, 20000);
+
+        return () => {
+            if (interval) {
+                clearInterval(interval);
+            }
+        };
+    });
 
     return (
         <div className="gallery">
@@ -29,11 +41,10 @@ function Gallery ({children}) {
                 })}
             </div>
             <div className="change-buttons">
-                <button onClick={() => {
-                    updateIndex(activeIndex - 1);
-                }}>
-                    Prev
-                </button>
+                <i class="icon-arrow-left" 
+                    onClick={() => {
+                        updateIndex(activeIndex - 1);
+                    }}/>
 
                 {React.Children.map(children, (child, index) => {
                     return (
@@ -45,12 +56,10 @@ function Gallery ({children}) {
                             {index + 1}
                         </button>)
                 })}
-
-                <button onClick={() => {
-                    updateIndex(activeIndex + 1);
-                }}>
-                    Next
-                </button>
+                <i class="icon-arrow-right"
+                    onClick={() => {
+                        updateIndex(activeIndex + 1);
+                    }}/>
             </div>
         </div>
     );
