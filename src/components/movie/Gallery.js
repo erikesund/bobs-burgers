@@ -35,6 +35,7 @@ function Gallery ({children}) {
 
     return (
         <div className="gallery">
+            <p id="gallery-header">Gallery</p>
             <div className="inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}> 
                 {React.Children.map(children, (child, index) => {
                     return React.cloneElement(child, { width: "100%"});

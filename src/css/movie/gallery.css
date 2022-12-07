@@ -4,7 +4,7 @@
 
 .inner {
   white-space: nowrap;
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
 
 .gallery-item {
@@ -17,6 +17,7 @@
 .change-buttons {
   display: flex;;
   justify-content: center;
+  align-items: center;
 }
 
 .change-buttons > button {
@@ -26,4 +27,10 @@
 .change-buttons > button.active {
   background-color: white;
   color: black
+}
+
+
+
+#gallery-header {
+  font-size: x-large;
 }
