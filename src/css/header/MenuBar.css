@@ -6,13 +6,16 @@
 }
 
 a {
-  border: 1px black solid;
   padding: 1rem;
-  background-color: white;
   width: 15rem;;
-  
+  text-decoration: none;
 }
 
 a:visited {
   color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: rotate(2deg);
 }
