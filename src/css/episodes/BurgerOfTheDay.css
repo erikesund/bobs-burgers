@@ -1,3 +1,7 @@
+#botd {
+  margin: auto;
+}
+
 .chalkboard {
   position: relative;
   text-align: center;
@@ -24,4 +28,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: larger;
+}
+
+#arrow-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -3,22 +3,28 @@ import "../../css/episodes/BurgerOfTheDay.css"
 
 const BurgerOfTheDay = ({burgersArray}) => {
 
-  const [selectedBurger, setSelectedBurger] = useState([]);
+  const [selectedBurger, setSelectedBurger] = useState();
 
   useEffect(() => {
     setSelectedBurger(burgersArray[0])
   })
 
   return (
-  <div className="chalkboard">
-    <img src="/chalkboard.png" alt="Chalkboard" width="250px"></img>
-    <div className="centered">
-      Burger of the Day: { 
-        selectedBurger != null?  selectedBurger.name : "There is no burger of the day in this episode :("
-      }
+  <div id="botd">
+    <div className="chalkboard">
+      <img src="/chalkboard.png" alt="Chalkboard" width="250px"></img>
+      <div className="centered">
+        Burger of the Day: { 
+          selectedBurger != null?  selectedBurger.name : "There is no burger of the day in this episode :("
+        }
+      </div>
+      <div className="bottom">
+        {selectedBurger != null? <p>Price: {selectedBurger.price}</p>: null}
+      </div>
     </div>
-    <div className="bottom">
-      {selectedBurger != null? <p>Price: {selectedBurger.price}</p>: null}
+    <div id="arrow-controls">
+      <i class="icon-arrow-left"></i>
+      <i class="icon-arrow-right"></i>
     </div>
   </div>
   )
