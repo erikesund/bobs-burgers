@@ -3,9 +3,7 @@ import React, {useEffect, useState} from "react";
 import Gallery, { GalleryItem } from "../components/movie/Gallery";
 import MovieBlurb from "../components/movie/MovieBlurb";
 import MoviePoster from "../components/movie/MoviePoster";
-import SideBar from "../components/movie/SideBar";
 import Trailer from "../components/movie/Trailer";
-import { Images } from "../components/movie/imageExport";
 
 function TheMovie (){
 
@@ -19,7 +17,6 @@ function TheMovie (){
         <MoviePoster/>
         <hr/>
       </div>
-      <SideBar/>
       <hr/>
       <Gallery>
         <GalleryItem><img src="/movie/gallery/image01.jpg" alt="The Belchers' sit around the dinner table and Bob looks shocked" width="1000px"/></GalleryItem>
