@@ -1,20 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "../../css/episodes/BurgerOfTheDay.css"
 
 const BurgerOfTheDay = ({foundBurger, burgersArray}) => {
 
   const [selectedBurger, setSelectedBurger] = useState(burgersArray[0]);
 
+  useEffect(() => {
+    setSelectedBurger(burgersArray[0])
+  })
+
   return (
   <div className="chalkboard">
     <img src="/chalkboard.png" alt="Chalkboard" width="250px"></img>
     <div className="centered">
       Burger of the Day: { 
-        foundBurger != null?  foundBurger.name : "There is no burger of the day in this episode :("
+        selectedBurger != null?  selectedBurger.name : "There is no burger of the day in this episode :("
       }
     </div>
     <div className="bottom">
-      {foundBurger != null? <p>Price: {foundBurger.price}</p>: null}
+      {selectedBurger != null? <p>Price: {selectedBurger.price}</p>: null}
     </div>
   </div>
   )
