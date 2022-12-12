@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "../../css/episodes/BurgerOfTheDay.css"
 
-const BurgerOfTheDay = ({foundBurger, burgersArray}) => {
+const BurgerOfTheDay = ({burgersArray}) => {
 
   const [selectedBurger, setSelectedBurger] = useState(burgersArray[0]);
 
