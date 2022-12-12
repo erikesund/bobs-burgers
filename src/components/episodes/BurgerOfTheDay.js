@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../css/episodes/BurgerOfTheDay.css"
 
-const BurgerOfTheDay = ({foundBurger}) => {
+const BurgerOfTheDay = ({foundBurger, burgersArray}) => {
+
+  const [selectedBurger, setSelectedBurger] = useState(burgersArray[0]);
 
   return (
   <div className="chalkboard">
