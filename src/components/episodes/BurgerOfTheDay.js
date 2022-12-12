@@ -3,7 +3,7 @@ import "../../css/episodes/BurgerOfTheDay.css"
 
 const BurgerOfTheDay = ({burgersArray}) => {
 
-  const [selectedBurger, setSelectedBurger] = useState(burgersArray[0]);
+  const [selectedBurger, setSelectedBurger] = useState([]);
 
   useEffect(() => {
     setSelectedBurger(burgersArray[0])
