@@ -17,7 +17,13 @@ function EpisodeDetails ({episode, burgers}) {
     }
   }
 
+  const episodeBurgersArray = () => {
+    let burgersArray = burgers.filter(burger => burger.episodeUrl === episode.url)
+    return burgersArray
+  }
+
   let foundBurger = findBurgerOTD()  
+  let burgersArray = episodeBurgersArray()
   
   return (
     <div id="episode-details-box">
@@ -25,7 +31,7 @@ function EpisodeDetails ({episode, burgers}) {
       <p>Production Code: {episode.productionCode}</p>
       <p>First Aired: {episode.airDate}</p>
       <p>Total Viewers: {episode.totalViewers}</p>
-      <BurgerOfTheDay foundBurger={foundBurger}/>
+      <BurgerOfTheDay foundBurger={foundBurger} burgersArray={burgersArray}/>
     </div>
   )
 };
