@@ -7,22 +7,22 @@ function EpisodeDetails ({episode, burgers}) {
     return null;
   }
   
-  const findBurgerOTD = () => {     
-    let foundBurger = burgers.find(burger => burger.episodeUrl === episode.url)
-    if(foundBurger == null){
-      return null
-    } 
-    else {
-      return foundBurger
-    }
-  }
+  // const findBurgerOTD = () => {     
+  //   let foundBurger = burgers.find(burger => burger.episodeUrl === episode.url)
+  //   if(foundBurger == null){
+  //     return null
+  //   } 
+  //   else {
+  //     return foundBurger
+  //   }
+  // }
 
   const episodeBurgersArray = () => {
     let burgersArray = burgers.filter(burger => burger.episodeUrl === episode.url)
     return burgersArray
   }
 
-  let foundBurger = findBurgerOTD()  
+  // let foundBurger = findBurgerOTD()  
   let burgersArray = episodeBurgersArray()
   
   return (
@@ -31,7 +31,7 @@ function EpisodeDetails ({episode, burgers}) {
       <p>Production Code: {episode.productionCode}</p>
       <p>First Aired: {episode.airDate}</p>
       <p>Total Viewers: {episode.totalViewers}</p>
-      <BurgerOfTheDay foundBurger={foundBurger} burgersArray={burgersArray}/>
+      <BurgerOfTheDay burgersArray={burgersArray}/>
     </div>
   )
 };
