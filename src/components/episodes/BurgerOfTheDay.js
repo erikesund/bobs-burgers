@@ -4,10 +4,20 @@ import "../../css/episodes/BurgerOfTheDay.css"
 const BurgerOfTheDay = ({burgersArray}) => {
 
   const [selectedBurger, setSelectedBurger] = useState();
+  const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
-    setSelectedBurger(burgersArray[0])
+    setSelectedBurger(burgersArray[activeIndex])
   })
+
+  const updateIndex = (newIndex) => {
+    if (newIndex < 0) {
+        newIndex =  burgersArray.length - 1;
+    } else if (newIndex >= burgersArray.length) {
+        newIndex = 0
+    }
+    setActiveIndex(newIndex);
+  }
 
   return (
   <div id="botd">
@@ -23,8 +33,25 @@ const BurgerOfTheDay = ({burgersArray}) => {
       </div>
     </div>
     <div id="arrow-controls">
-      <i class="icon-arrow-left"></i>
-      <i class="icon-arrow-right"></i>
+      <i className="icon-arrow-left" onClick={() => {
+        updateIndex(activeIndex - 1);
+      }}></i>
+
+      {burgersArray.map((burgers, index) => {
+        return (
+          <button
+          className={`${index === activeIndex ? "active" : ""}`}
+          onClick={() => {
+          updateIndex(index)
+          }}>
+            {index + 1}
+          </button>
+        )
+      })}
+
+      <i className="icon-arrow-right" onClick={() => {
+        updateIndex(activeIndex + 1);
+      }}></i>
     </div>
   </div>
   )

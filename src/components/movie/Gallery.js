@@ -42,7 +42,7 @@ function Gallery ({children}) {
                 })}
             </div>
             <div className="change-buttons">
-                <i class="icon-arrow-left" 
+                <i className="icon-arrow-left" 
                     onClick={() => {
                         updateIndex(activeIndex - 1);
                     }}/>
@@ -57,7 +57,7 @@ function Gallery ({children}) {
                             {index + 1}
                         </button>)
                 })}
-                <i class="icon-arrow-right"
+                <i className="icon-arrow-right"
                     onClick={() => {
                         updateIndex(activeIndex + 1);
                     }}/>
