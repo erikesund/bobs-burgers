@@ -12,7 +12,9 @@ const BurgerOfTheDay = ({burgersArray}) => {
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
-        newIndex =  burgersArray.length() - 1; 
+        newIndex =  burgersArray.length - 1;
+    } else if (newIndex >= burgersArray.length) {
+        newIndex = 0
     }
     setActiveIndex(newIndex);
   }
