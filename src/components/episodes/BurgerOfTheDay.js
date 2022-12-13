@@ -31,7 +31,7 @@ const BurgerOfTheDay = ({burgersArray}) => {
       </div>
     </div>
     <div id="arrow-controls">
-      <i class="icon-arrow-left" onClick={() => {
+      <i className="icon-arrow-left" onClick={() => {
         updateIndex(activeIndex - 1);
       }}></i>
 
@@ -47,7 +47,7 @@ const BurgerOfTheDay = ({burgersArray}) => {
         )
       })}
 
-      <i class="icon-arrow-right" onClick={() => {
+      <i className="icon-arrow-right" onClick={() => {
         updateIndex(activeIndex + 1);
       }}></i>
     </div>
