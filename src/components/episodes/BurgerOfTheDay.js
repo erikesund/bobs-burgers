@@ -11,6 +11,9 @@ const BurgerOfTheDay = ({burgersArray}) => {
   })
 
   const updateIndex = (newIndex) => {
+    if (newIndex < 0) {
+        newIndex =  burgersArray.length() - 1; 
+    }
     setActiveIndex(newIndex);
   }
 
@@ -31,6 +34,19 @@ const BurgerOfTheDay = ({burgersArray}) => {
       <i class="icon-arrow-left" onClick={() => {
         updateIndex(activeIndex - 1);
       }}></i>
+
+      {burgersArray.map((burgers, index) => {
+        return (
+          <button
+          className={`${index === activeIndex ? "active" : ""}`}
+          onClick={() => {
+          updateIndex(index)
+          }}>
+            {index + 1}
+          </button>
+        )
+      })}
+
       <i class="icon-arrow-right" onClick={() => {
         updateIndex(activeIndex + 1);
       }}></i>
