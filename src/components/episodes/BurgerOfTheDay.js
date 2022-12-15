@@ -32,7 +32,7 @@ const BurgerOfTheDay = ({burgersArray}) => {
         {selectedBurger != null? <p>Price: {selectedBurger.price}</p>: null}
       </div>
     </div>
-    <div id="arrow-controls">
+    <div className="change-buttons">
       <i className="icon-arrow-left" onClick={() => {
         updateIndex(activeIndex - 1);
       }}></i>

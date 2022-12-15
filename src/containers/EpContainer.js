@@ -36,7 +36,6 @@ function EpContainer() {
         }
       setSeasons(seasons);
       });
-
   };
 
   useEffect(() => {

@@ -30,8 +30,17 @@
     font-size: larger;
 }
 
-#arrow-controls {
-  display: flex;
+.change-buttons {
+  display: flex;;
   justify-content: center;
   align-items: center;
+}
+
+.change-buttons > button {
+  margin: 5px;
+}
+
+.change-buttons > button.active {
+  background-color: white;
+  color: black
 }
