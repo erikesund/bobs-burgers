@@ -11,13 +11,14 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <p id='work-in-progress'>A Work In Progress...</p>
+      <h1 id='work-in-progress'>A Work In Progress...</h1>
       <Router>
         <Routes>
           <Route path="/" element={<EpContainer/>} />
           <Route path="episodes" element={<EpContainer/>} />
           <Route path="movie" element={<MovieContainer/>} />
           <Route path="characters" element={<CharactersContainer/>} />
+          {/* <Route path="about" element={<AboutContainer/>} /> */}
         </Routes>
       </Router>
     </div>
